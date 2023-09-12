@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <p>Kérem, adja meg a téglalap A oldalát:</p>
+        <input type="number" id="oldalA">
+        <p>Kérem, adja meg a téglalap B oldalát:</p>
+        <input type="number" id="oldalB">
+        <button type="button" onclick="szamol()">Számol</button>
+    </form>
+
+    <div id="eredmeny"></div>
+
+    <script>
+        function szamol() {
+            var oldalA = document.getElementById("oldalA").value;
+            var oldalB = document.getElementById("oldalB").value;
+
+            var terulet = oldalA * oldalB;
+            var kerulet = 2 * (oldalA + oldalB);
+
+            var eredmeny = document.getElementById("eredmeny");
+            eredmeny.innerHTML = "A téglalap területe: " + terulet + "<br>Kerülete: " + kerulet;
+        }
+    </script>
+</body>
+</html>

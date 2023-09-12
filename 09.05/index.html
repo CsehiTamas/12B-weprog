@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Kérem, adja meg az első számot:</p>
+    <input type="text" id="szam1">
+
+    <p>Kérem, adja meg a második számot:</p>
+    <input type="text" id="szam2">
+
+    <button onclick="eredmenygomb()">Eredmény</button>
+
+    <p id="eredmeny"></p>
+
+    <script>
+        function eredmenygomb() {
+            var szam1 = document.getElementById("szam1").value;
+            var szam2 = document.getElementById("szam2").value;
+                if (szam1 > szam2) {
+                    document.getElementById("eredmeny").innerHTML = szam1 + " a nagyobb szám.";
+                } else if (szam2 > szam1) {
+                    document.getElementById("eredmeny").innerHTML = szam2 + " a nagyobb szám.";
+                } else {
+                    document.getElementById("eredmeny").innerHTML = "A két szám egyenlő.";
+                }
+            }
+    </script>
+
+</body>
+</html>
